@@ -58,6 +58,8 @@ import "request/user/query_nearby_users_request.proto";
 import "request/user/query_user_online_statuses_request.proto";
 import "request/user/query_user_profiles_request.proto";
 import "request/user/query_user_settings_request.proto";
+import "request/user/register_with_phone_request.proto";
+import "request/user/send_verification_code_request.proto";
 import "request/user/relationship/create_friend_request_request.proto";
 import "request/user/relationship/create_relationship_group_request.proto";
 import "request/user/relationship/create_relationship_request.proto";
@@ -91,6 +93,10 @@ message TurmsRequest {
         // User - Session
         CreateSessionRequest create_session_request = 3;
         DeleteSessionRequest delete_session_request = 4;
+
+        // User - Phone Registration
+        SendVerificationCodeRequest send_verification_code_request = 15;
+        RegisterWithPhoneRequest register_with_phone_request = 16;
 
         // Conversation
         QueryConversationsRequest query_conversations_request = 5;

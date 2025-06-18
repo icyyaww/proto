@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+import "model/common/value.proto";
+
+option java_package = "im.turms.server.common.access.client.dto.request.user";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+message SendVerificationCodeRequest {
+    string phone_number = 1;
+    optional string ip_address = 2;
+
+    repeated Value custom_attributes = 15;
+}

@@ -19,6 +19,8 @@ message UserInfo {
     optional int64 last_updated_date = 7;
     optional bool active = 8;
     map<string, Value> user_defined_attributes = 9;
+    optional string phone_number = 10;
+    optional bool phone_verified = 11;
 
     repeated Value custom_attributes = 15;
 }
